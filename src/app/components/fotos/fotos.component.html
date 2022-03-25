@@ -1,0 +1,14 @@
+<!--HTML de la página de Fotos-->
+<!--Copiamos las CARDS de Bootstrap-->
+
+
+<div class="row row-cols-1 row-cols-md-4 g-4">
+    <div class="col" *ngFor="let item of items | async">
+        <div class="card">
+            <img [src]="item.url" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{item.nombre}}</h5>
+
+            </div>
+        </div>
+    </div>
